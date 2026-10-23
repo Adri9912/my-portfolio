@@ -1,0 +1,9 @@
+# Configuration privée éventuelle
+.env
+.env.*
+!.env.example
+
+# Fichiers locaux sans utilité pour le site
+.DS_Store
+Thumbs.db
+*.log

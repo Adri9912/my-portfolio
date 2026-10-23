@@ -1,0 +1,715 @@
+/* PORTFOLIO D'ADRIEN — UN SEUL FICHIER CSS
+Chaque section correspond à une partie du site.
+
+Couleurs à chercher avec Ctrl+F :
+#f5efe5 = fond clair      #32251d = texte foncé
+#876537 = doré         #695949 = texte secondaire
+
+Pour changer une couleur partout, utilise "Remplacer tout".
+*/
+
+/* 1. BASE : POLICE, FOND ET TEXTES */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5efe5;
+    color: #32251d;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+main,
+header,
+footer {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 72px;
+    letter-spacing: -3px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+em,
+.logo span,
+.identite span,
+.project-art strong span {
+    color: #876537;
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #876537;
+    outline-offset: 5px;
+}
+
+.intro,
+.identite p,
+dd,
+.contact-note p {
+    color: #695949;
+}
+
+.intro {
+    font-size: 19px;
+    max-width: 600px;
+}
+
+.eyebrow,
+.header-note,
+.timeline-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #695949;
+}
+
+/* Lien d'accès rapide pour la navigation au clavier. */
+.skip {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    z-index: 10;
+    background-color: white;
+    padding: 12px;
+}
+
+.skip:focus {
+    top: 10px;
+}
+
+/* 2. EN-TÊTE ET MENU DES AUTRES PAGES */
+.header,
+.entete-accueil,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 40px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.header nav a,
+.lien-contact {
+    font-size: 15px;
+}
+
+.header nav a:hover,
+.header nav a[aria-current] {
+    color: #876537;
+}
+
+.lien-contact {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* 3. ACCUEIL : PRÉSENTATION À GAUCHE, MENU À DROITE
+display: flex met les deux blocs côte à côte.
+flex: 1 leur donne la même part de largeur.
+*/
+.accueil {
+    display: flex;
+    align-items: stretch;
+    gap: 55px;
+    padding: 35px 40px 65px;
+}
+
+.presentation,
+.navigation-accueil {
+    flex: 1;
+    min-width: 0;
+}
+
+.presentation blockquote {
+    margin: 20px 0 30px;
+    font-size: 31px;
+    letter-spacing: -1px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* CADRE PHOTO : le portrait est enregistré dans images/adrien.png. */
+.emplacement-photo {
+    height: 350px;
+    width: 85%;
+    margin: 0 auto;
+    border: 2px solid #b39a76;
+    border-radius: 160px 160px 16px 16px;
+    box-shadow: 12px 12px 0 #eadecb;
+    background-color: #e6d8c2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.emplacement-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplir le cadre sans déformer la photo. */
+    object-position: center 35%; /* Garder le visage visible dans le cadre. */
+}
+
+.identite {
+    margin-top: 20px;
+}
+
+/* Le nom complet doit rester dans la colonne de présentation. */
+.identite h1 {
+    font-size: 44px;
+    letter-spacing: -1px;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.identite p {
+    font-size: 15px;
+}
+
+/* 4. MENU DE L’ACCUEIL : SURVOL ET ROTATION DU + EN CSS */
+.navigation-accueil {
+    padding: 40px 35px;
+    background-color: #dfceb7;
+    color: #32251d;
+    border-radius: 24px;
+}
+
+.navigation-accueil .eyebrow {
+    color: #65513b;
+}
+
+.menu-accueil a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #bca78b;
+    transition: color 0.2s, padding 0.2s;
+}
+
+.nom-menu {
+    font-size: 49px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.symbole-menu {
+    margin-left: auto;
+    font-size: 30px;
+    transition: transform 0.2s;
+}
+
+.menu-accueil a:hover,
+.menu-accueil a:focus-visible {
+    color: #725024;
+    padding-left: 10px;
+}
+
+.menu-accueil a:hover .symbole-menu,
+.menu-accueil a:focus-visible .symbole-menu {
+    transform: rotate(90deg);
+}
+
+/* La description est cachée, puis affichée au survol ou avec Tab. */
+.aide-menu {
+    display: none;
+    width: 100%;
+    font-size: 14px;
+    color: #65513b;
+}
+
+.menu-accueil a:hover .aide-menu,
+.menu-accueil a:focus-visible .aide-menu {
+    display: block;
+}
+
+.recherche-alternance {
+    border-left: 2px solid #876537;
+    padding-left: 18px;
+    margin-top: 35px;
+}
+
+.recherche-alternance span {
+    font-size: 13px;
+    color: #725024;
+}
+
+.recherche-alternance p {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+/* Petites icônes et liens en bas du panneau de l'accueil. */
+.reseaux-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #bca78b;
+}
+
+.reseaux-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.reseaux-menu a:hover {
+    text-decoration: underline;
+}
+
+/* 5. CONTENU COMMUN ET PROJETS */
+.section,
+.page-intro {
+    padding: 55px 40px;
+}
+
+.section-head,
+.feature-project,
+.project-detail,
+.contact-layout,
+.value-grid {
+    display: flex;
+    gap: 40px;
+}
+
+/* Aligner les liens avec le bas des titres, sans marge sous le titre. */
+.section-head {
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.section-head h2 {
+    margin-bottom: 0;
+}
+
+.feature-project > *,
+.project-detail > *,
+.contact-layout > *,
+.value-grid > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.feature-project {
+    background-color: white;
+    border: 1px solid #d8c9b5;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-art {
+    background-color: #dbc6a9;
+    color: #32251d;
+    padding: 30px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-art strong {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.project-art small {
+    font-size: 13px;
+}
+
+/* Accordéons natifs : le même name dans le HTML limite l'ouverture à un projet. */
+.projet-accordeon {
+    margin: 0 40px 24px;
+    border: 3px solid #b39a76;
+    border-radius: 16px;
+    background-color: #f5efe5;
+}
+
+.projet-accordeon summary {
+    padding: 22px 26px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.projet-accordeon summary h2 {
+    display: inline;
+    margin: 0;
+    font-size: 28px;
+}
+
+.projet-accordeon summary:hover,
+.projet-accordeon summary:focus-visible {
+    color: #725024;
+    background-color: #eee2ce;
+}
+
+.projet-accordeon summary:focus-visible {
+    outline: 2px solid #876537;
+    outline-offset: 4px;
+}
+
+.contenu-projet {
+    padding: 0 26px 26px;
+}
+
+/* Centrer les captures face au texte de droite. */
+.contenu-projet > .apercu-projet {
+    align-self: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contenu-projet > .apercu-projet:hover,
+.contenu-projet > .apercu-projet:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px #32251d1a;
+}
+
+/* Une capture de projet cliquable, affichée en entier. */
+.apercu-projet {
+    max-width: 100%;
+    padding: 16px;
+    border: 3px solid #b39a76;
+    border-radius: 16px;
+    background-color: #eadecb;
+    text-align: center;
+}
+
+.apercu-projet img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    border: 1px solid #b39a76;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.project-description {
+    padding: 30px;
+}
+
+.tag,
+.chips span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    background-color: #eee2ce;
+    color: #705027;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 5px 0 20px;
+}
+
+.timeline article {
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+    border-top: 1px solid #d8c9b5;
+}
+
+.timeline-label {
+    width: 190px;
+    flex-shrink: 0;
+}
+
+.values {
+    margin: 0 40px 50px;
+    background-color: #eadecb;
+}
+
+/* Cartes de technologies : elles passent à la ligne selon la place disponible. */
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.technologies article {
+    flex: 1 1 240px;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #d8c9b5;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.technologies article p {
+    margin-bottom: 0;
+}
+
+/* 6. BOUTONS ET BLOC CONTACT */
+.button {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: 30px;
+    transition: transform 0.2s, background-color 0.2s;
+    background-color: #876537;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background-color: #654723;
+}
+
+.text-link {
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+/* Icônes à côté des coordonnées sur la page Contact. */
+.lien-coordonnee {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.lien-coordonnee img {
+    flex-shrink: 0;
+}
+
+/* 7. FORMULAIRE : ENVOI HTML VERS FORMSPREE */
+.contact-note h2 {
+    font-size: 25px;
+}
+
+form {
+    border-radius: 16px;
+    background-color: white;
+    padding: 28px;
+    border: 1px solid #d8c9b5;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d8c9b5;
+    border-radius: 4px;
+    color: #32251d;
+    background-color: white;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 8. PIED DE PAGE */
+footer {
+    border-top: 1px solid #d8c9b5;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* APPARITION DISCRÈTE : le contenu monte de 12 px en devenant visible. */
+.presentation,
+.navigation-accueil {
+    animation: apparition 0.6s;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 9. TÉLÉPHONE : EN DESSOUS DE 760 PX, LES COLONNES S'EMPILENT */
+@media (max-width: 760px) {
+    .header,
+    .entete-accueil,
+    footer {
+        padding: 22px;
+        flex-wrap: wrap;
+    }
+
+    .header-note,
+    .entete-accueil > span {
+        display: none;
+    }
+
+    .header nav {
+        width: 100%;
+        gap: 18px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .accueil,
+    .section,
+    .page-intro {
+        padding: 35px 22px;
+    }
+
+    .accueil,
+    .section-head,
+    .feature-project,
+    .project-detail,
+    .contact-layout,
+    .value-grid,
+    .timeline article {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* Sur téléphone, titres et liens commencent tous à gauche. */
+    .section-head {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .projet-accordeon {
+        margin: 0 22px 20px;
+    }
+
+    .projet-accordeon summary {
+        padding: 20px;
+    }
+
+    .projet-accordeon summary h2 {
+        font-size: 24px;
+    }
+
+    .contenu-projet {
+        padding: 0 20px 20px;
+    }
+
+    .contenu-projet > .apercu-projet {
+        width: 100%;
+    }
+
+    .presentation blockquote {
+        font-size: 24px;
+    }
+
+    .emplacement-photo {
+        height: 290px;
+    }
+
+    .navigation-accueil {
+        padding: 28px 24px;
+    }
+
+    .identite h1 {
+        font-size: 38px;
+    }
+
+    .nom-menu {
+        font-size: 36px;
+    }
+
+    .values {
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+}
+
+/* Respecter les personnes qui préfèrent éviter les animations. */
+@media (prefers-reduced-motion: reduce) {
+    .menu-accueil a, .symbole-menu, .button, .feature-project, .projet-accordeon summary,
+    .contenu-projet > .apercu-projet {
+        transition: none;
+    }
+
+    .contenu-projet > .apercu-projet:hover,
+    .contenu-projet > .apercu-projet:focus-visible {
+        transform: none;
+    }
+
+    .presentation,
+    .navigation-accueil {
+        animation: none;
+    }
+
+    .button:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact — Adrien Calvayrac</title>
+        <meta name="description" content="Contactez Adrien Calvayrac pour une alternance ou un projet informatique. Retrouvez son e-mail, ses profils LinkedIn et GitHub et son CV téléchargeable.">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a class="skip" href="#contenu">Aller au contenu</a>
+        <!-- EN-TÊTE : nom et navigation -->
+        <header class="header">
+            <a class="logo" href="index.html" aria-label="Adrien, accueil">adrien<span>.</span></a>
+            <!-- MENU : change le texte et le href pour modifier un lien -->
+            <nav aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="parcours.html">À propos</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+            <span class="header-note">ÉTUDIANT À EPITECH</span>
+        </header>
+        <!-- CONTENU PRINCIPAL -->
+        <main id="contenu">
+            <section class="page-intro">
+                <p class="eyebrow">CONSTRUIRE LA SUITE</p>
+                <h1>Faisons <br> <em>connaissance.</em></h1>
+                <p class="intro">Une alternance, un projet ou une discussion autour de l’informatique : tout commence par un échange.</p>
+            </section>
+            <section class="section contact-layout">
+                <div>
+                    <div class="contact-note" id="cv">
+                        <h2>Mon CV et mes coordonnées</h2>
+                        <p>Retrouvez mon parcours sur LinkedIn et mes projets sur GitHub.</p>
+                        <p><a class="text-link lien-coordonnee" href="https://www.linkedin.com/in/adrien-calvayrac-97168914a/"><img src="images/linkedin.svg" alt="" width="20" height="20">LinkedIn</a></p>
+                        <p><a class="text-link lien-coordonnee" href="https://github.com/Adri9912"><img src="images/github.svg" alt="" width="20" height="20">GitHub</a></p>
+                        <p><a class="text-link lien-coordonnee" href="mailto:adri.calvay@gmail.com"><img src="images/email.svg" alt="" width="20" height="20">adri.calvay@gmail.com</a></p>
+                        <p><a class="button" href="documents/CV_Adrien_Calvayrac.pdf" download>Télécharger mon CV</a></p>
+                    </div>
+                </div>
+                <!-- Le navigateur envoie les champs à Formspree avec la méthode POST. -->
+                <form id="contact-form" action="https://formspree.io/f/maeewdjg" method="post">
+                    <label for="name">Votre nom</label>
+                    <input id="name" name="name" autocomplete="name" required placeholder="Camille Dupont">
+                    <label for="email">Votre adresse e-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required placeholder="camille@exemple.fr">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Bonjour Adrien, j’aimerais échanger avec toi…"></textarea>
+                    <button class="button" type="submit">Envoyer</button>
+                </form>
+            </section>
+        </main>
+        <!-- PIED DE PAGE -->
+        <footer>
+            <a class="logo" href="index.html">adrien<span>.</span></a>
+            <p>Apprendre. Construire. Avancer.</p>
+        </footer>
+    </body>
+</html>

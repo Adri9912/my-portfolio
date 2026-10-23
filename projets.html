@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projets — Adrien Calvayrac</title>
+        <meta name="description" content="Découvrez mes projets : Job Board avec Laravel et MySQL, CV en ligne et portfolio. Contexte, contribution, technologies et liens GitHub.">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <a class="skip" href="#contenu">Aller au contenu</a>
+        <!-- EN-TÊTE : nom et navigation -->
+        <header class="header">
+            <a class="logo" href="index.html" aria-label="Adrien, accueil">adrien<span>.</span></a>
+            <!-- MENU : change le texte et le href pour modifier un lien -->
+            <nav aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="projets.html" aria-current="page">Projets</a>
+                <a href="parcours.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <span class="header-note">ÉTUDIANT À EPITECH</span>
+        </header>
+        <!-- CONTENU PRINCIPAL -->
+        <main id="contenu">
+            <section class="page-intro">
+                <p class="eyebrow">APPRENDRE PAR LA PRATIQUE</p>
+                <h1>Mes <em>projets.</em></h1>
+                <p class="intro">Les premiers essais, les idées qui prennent forme et les apprentissages qui vont avec.</p>
+            </section>
+            <details class="projet-accordeon" name="projets" id="job-board">
+                <summary><h2>Job Board</h2></summary>
+                <div class="project-detail contenu-projet">
+                    <!-- La capture ouvre le dépôt GitHub du Job Board. -->
+                    <a class="apercu-projet" href="https://github.com/Adri9912/Job-Board" aria-label="Voir le code du Job Board sur GitHub" target="_blank" rel="noopener noreferrer"><img src="images/job-board.png" alt="Job.i : liste des offres d’emploi avec leur intitulé, entreprise, ville et bouton En savoir plus." width="832" height="893" loading="lazy"></a>
+                    <div>
+                        <span class="tag">PROJET EPITECH</span>
+                        <p>Une plateforme dédiée aux offres d’emploi.</p>
+                        <dl>
+                            <dt>Le contexte</dt>
+                            <dd>Un projet réalisé en binôme dans le cadre de ma formation à Epitech.</dd>
+                            <dt>L’objectif</dt>
+                            <dd>Permettre de consulter des offres, de créer un compte et de déposer une candidature, avec une interface d’administration pour gérer la plateforme.</dd>
+                            <dt>Ma contribution</dt>
+                            <dd>J’ai participé à l’intégration de l’interface avec le backend Laravel, à l’authentification des utilisateurs et à la gestion des données depuis l’espace administrateur.</dd>
+                            <dt>Technologies et compétences</dt>
+                            <dd>Relier une interface en HTML, CSS et JavaScript aux routes Laravel et à une base MySQL, valider les données des formulaires et contrôler les accès selon le rôle de l’utilisateur.</dd>
+                            <dt>Ce que j’ai appris</dt>
+                            <dd>Ce projet m’a permis de travailler le parcours complet d’une donnée : saisie dans un formulaire, traitement côté serveur, enregistrement dans MySQL et affichage du résultat. J’ai aussi découvert l’importance des vérifications avant une action : connexion, droits et données reçues.</dd>
+                        </dl>
+                        <div class="chips">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>SQL</span>
+                            <span>MySQL</span>
+                        </div>
+                        <p class="lien-github"><a class="text-link" href="https://github.com/Adri9912/Job-Board" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a></p>
+                    </div>
+                </div>
+            </details>
+            <!-- La capture et le lien texte ouvrent le même dépôt GitHub. -->
+            <details class="projet-accordeon" name="projets" id="cv-en-ligne">
+                <summary><h2>CV en ligne</h2></summary>
+                <div class="project-detail contenu-projet">
+                    <a class="apercu-projet" href="https://github.com/Adri9912/mon-cv" target="_blank" rel="noopener noreferrer"><img src="images/cv-en-ligne.png" alt="Aperçu de mon CV en ligne : portrait, coordonnées et rubriques de parcours. Consulter le code sur GitHub." width="912" height="1234" loading="lazy"></a>
+                    <div>
+                        <span class="tag">PROJET EPITECH</span>
+                        <p>Présenter mon parcours professionnel sous la forme d’une page web.</p>
+                        <dl>
+                            <dt>Le contexte</dt>
+                            <dd>Un projet réalisé pendant mon apprentissage du HTML et du CSS à Epitech.</dd>
+                            <dt>L’objectif</dt>
+                            <dd>Rassembler ma présentation, mes coordonnées, mes compétences et mon parcours dans un CV accessible depuis un navigateur.</dd>
+                            <dt>Ma réalisation</dt>
+                            <dd>Une page avec une colonne de présentation et des rubriques repliables pour les expériences, les formations et les projets.</dd>
+                            <dt>Ce que j’ai travaillé</dt>
+                            <dd>La structure HTML, les classes CSS, les espacements, les couleurs et l’adaptation de la mise en page aux petits écrans.</dd>
+                        </dl>
+                        <div class="chips">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <p><a class="text-link" href="https://github.com/Adri9912/mon-cv" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a></p>
+                    </div>
+                </div>
+            </details>
+            <details class="projet-accordeon" name="projets" id="portfolio">
+                <summary><h2>Portfolio personnel</h2></summary>
+                <div class="project-detail contenu-projet">
+                    <!-- La capture pourra être reliée au dépôt GitHub du portfolio. -->
+                    <div class="apercu-projet">
+                        <img src="images/portfolio.png" alt="Accueil de mon portfolio : portrait d’Adrien Calvayrac, citation et menu vers les projets, la présentation, le CV et le contact." width="812" height="878" loading="lazy">
+                    </div>
+                    <div>
+                        <p>Présenter mon parcours, mes réalisations et mon objectif d’alternance dans un espace personnel qui évolue avec mes apprentissages.</p>
+                        <dl>
+                            <dt>Le point de départ</dt>
+                            <dd>Créer un site de zéro, organisé en plusieurs pages.</dd>
+                            <dt>Ce que j’ai travaillé</dt>
+                            <dd>L’organisation du contenu sur quatre pages, la mise en page avec Flexbox, la navigation au clavier et l’adaptation aux écrans mobiles.</dd>
+                            <dt>La prochaine étape</dt>
+                            <dd>Publier le site en ligne et continuer à le faire évoluer avec mes nouvelles réalisations.</dd>
+                        </dl>
+                        <div class="chips">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <!-- Remplacer ce texte par un lien vers le dépôt du projet. -->
+                        <p class="lien-github">Lien GitHub à ajouter.</p>
+                    </div>
+                </div>
+            </details>
+            <section class="next-project section">
+                <p class="eyebrow">LA SUITE</p>
+                <h2>De nouveaux projets arrivent.</h2>
+                <p>Mes réalisations trouveront leur place ici, avec leur objectif, les technologies utilisées et ce que j’en ai appris.</p>
+            </section>
+        </main>
+        <!-- PIED DE PAGE -->
+        <footer>
+            <a class="logo" href="index.html">adrien<span>.</span></a>
+            <p>Apprendre. Construire. Avancer.</p>
+        </footer>
+    </body>
+</html>
