@@ -527,6 +527,17 @@ dd {
     background-color: #654723;
 }
 
+/* Le calendrier reprend la forme du bouton CV, avec un fond transparent. */
+.button-secondaire {
+    background-color: transparent;
+    border: 1px solid #876537;
+    color: #705027;
+}
+
+.button-secondaire:hover {
+    background-color: #eadecb;
+}
+
 .text-link {
     font-size: 15px;
     text-decoration: underline;
