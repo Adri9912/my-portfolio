@@ -2,16 +2,19 @@
 
 Portfolio personnel présentant mon parcours, mes projets et mon objectif d’alternance en 2027 dans le développement et la gestion informatique.
 
+- Site en ligne : [adri9912.github.io/my-portfolio](https://adri9912.github.io/my-portfolio/)
+- Dépôt GitHub : [Adri9912/my-portfolio](https://github.com/Adri9912/my-portfolio)
+
 ## Structure
 
 - `index.html` : accueil, photo, présentation et navigation.
 - `projets.html` : Job Board, CV en ligne et portfolio, dans des accordéons.
 - `parcours.html` : parcours, progression, technologies et sport.
-- `contact.html` : coordonnées, CV et formulaire de contact.
+- `contact.html` : coordonnées, CV, calendrier d’alternance et formulaire de contact.
 - `style.css` : mise en page et effets, avec règles pour les écrans de 760 px ou moins.
 - `app.js` : ouvre l’accordéon correspondant à un lien comme `projets.html#portfolio`.
 - `images/` : portrait, captures et icônes ; licence des icônes dans `images/LICENSE-icones.txt`.
-- `documents/` : CV au format PDF.
+- `documents/` : CV et calendrier d’alternance au format PDF.
 - `MODIFIER.md` : guide de personnalisation fourni avec les fichiers du site.
 
 ## Ouvrir le site
@@ -26,16 +29,20 @@ Le formulaire envoie ses champs à Formspree avec la méthode POST. Le destinata
 
 Le portrait et les captures ont été fournis par Adrien. Les icônes proviennent de Lucide et leur licence est conservée dans le projet. La maquette et le code ont été élaborés avec une assistance IA, puis ajustés au fil des échanges.
 
+Le calendrier d’alternance Epitech, fourni par Adrien, est accessible sous le lien du CV sur la page Contact. Il s’ouvre dans un nouvel onglet.
+
 ## Publication
 
-La mise en ligne n’est pas encore activée. La solution envisagée est GitHub Pages, depuis la branche de publication du dépôt personnel du portfolio. Placer les fichiers de ce dossier à la racine du dépôt, puis choisir cette branche et le dossier racine dans Settings > Pages. Une fois configuré, chaque push sur la branche choisie déclenche la publication.
+Le site est publié avec GitHub Pages depuis la branche `main`, dossier racine (`/`). Les fichiers HTML, CSS, JavaScript et les dossiers de ressources sont placés directement à la racine du dépôt.
 
-Renseigner ici l’URL du dépôt et celle du site après leur création.
+La configuration dans **Settings > Pages** est : **Deploy from a branch**, branche **main**, dossier **/ (root)**. Chaque modification commitée puis poussée sur `main` déclenche automatiquement la mise à jour du site, sans compilation locale ni publication manuelle.
+
+Pour mettre le site à jour : modifier les fichiers, les ajouter avec `git add`, créer un commit descriptif avec `git commit`, puis envoyer les changements avec `git push`. Le déploiement se suit dans l’onglet [Actions du dépôt](https://github.com/Adri9912/my-portfolio/actions). Attendre sa réussite avant de vérifier le site publié.
 
 ## Vérifications avant livraison
 
 - Vérifier l’affichage réel sur ordinateur et téléphone, ainsi qu’avec le texte agrandi.
 - Parcourir les liens, les accordéons et le formulaire avec Tab et Entrée.
-- Vérifier le téléchargement du CV et les liens vers les dépôts GitHub.
+- Vérifier le téléchargement du CV, l’ouverture du calendrier et les liens vers les dépôts GitHub.
 - Confirmer la réception des messages du formulaire.
-- Ajouter l’adresse du dépôt du portfolio dans la page Projets.
+- Après chaque publication, vérifier que les dernières modifications apparaissent sur le site en ligne.
