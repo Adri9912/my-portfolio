@@ -1,14 +1,33 @@
-// Sur Projets, un lien comme projets.html#portfolio doit ouvrir le bon accordéon.
+// Sur Projets, afficher le début du projet lorsqu’un accordéon s’ouvre.
 // Le formulaire de Contact fonctionne sans JavaScript.
 
+function afficherProjet(projet) {
+    const mouvementReduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    projet.scrollIntoView({
+        behavior: mouvementReduit ? 'auto' : 'smooth',
+        block: 'start'
+    });
+}
+
+document.querySelectorAll('.projet-accordeon').forEach(function(projet) {
+    projet.addEventListener('toggle', function() {
+        if (projet.open) {
+            afficherProjet(projet);
+        }
+    });
+});
+
+// Un lien comme projets.html#portfolio ouvre aussi le bon accordéon.
 function ouvrirProjetDepuisLien() {
-    // Retirer le # pour retrouver l'identifiant du projet dans le HTML.
     const identifiant = window.location.hash.substring(1);
     const projet = document.getElementById(identifiant);
 
     if (projet !== null && projet.tagName === 'DETAILS') {
-        projet.open = true;
-        projet.scrollIntoView();
+        if (projet.open) {
+            afficherProjet(projet);
+        } else {
+            projet.open = true;
+        }
     }
 }
 

@@ -370,6 +370,7 @@ flex: 1 leur donne la même part de largeur.
 
 /* Accordéons natifs : le même name dans le HTML limite l'ouverture à un projet. */
 .projet-accordeon {
+    scroll-margin-top: 16px;
     margin: 0 40px 24px;
     border: 3px solid #b39a76;
     border-radius: 16px;
@@ -714,6 +715,11 @@ footer p {
     .menu-accueil .aide-menu {
         display: block;
         line-height: 1.5;
+    }
+
+    /* Sur mobile, « Découvrir » suffit pour signaler le lien. */
+    .menu-accueil .symbole-menu {
+        display: none;
     }
 
     .menu-accueil a::after {
