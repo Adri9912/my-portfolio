@@ -697,7 +697,41 @@ footer p {
     }
 
     .navigation-accueil {
-        padding: 28px 24px;
+        padding: 24px 20px;
+    }
+
+    /* Tout le bloc reste un lien : description et invitation visibles sans survol. */
+    .menu-accueil a {
+        gap: 6px;
+        padding: 16px 0;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .menu-accueil .nom-menu {
+        font-size: 30px;
+    }
+
+    .menu-accueil .aide-menu {
+        display: block;
+        line-height: 1.5;
+    }
+
+    .menu-accueil a::after {
+        content: "Découvrir →";
+        width: 100%;
+        font-size: 13px;
+        font-weight: 600;
+        color: #725024;
+    }
+
+    /* Éviter le décalage du texte sur téléphone et signaler l’appui. */
+    .menu-accueil a:hover,
+    .menu-accueil a:focus-visible {
+        padding-left: 0;
+    }
+
+    .menu-accueil a:active {
+        background-color: #eadecb;
     }
 
     .identite h1 {
