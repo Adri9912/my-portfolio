@@ -13,9 +13,9 @@ Ouvre le dossier du site dans VS Code, puis `index.html` dans ton navigateur. Ap
 | `parcours.html` | À propos, progression, technologies et sport |
 | `contact.html` | Coordonnées et formulaire |
 | `style.css` | Tous les styles, rangés en sections commentées |
-| `app.js` | Ouverture d’un accordéon à partir d’un lien direct |
+| `app.js` | Ouverture par lien direct et défilement vers le projet ouvert |
 | `images/` | Portrait, captures et icônes |
-| `documents/` | CV au format PDF |
+| `documents/` | CV et calendrier d’alternance au format PDF |
 | `README.md` | Présentation du projet, fonctionnement et publication |
 
 ## Changer un texte
@@ -80,7 +80,14 @@ Les profils et l’adresse e-mail sont dans `index.html` et `contact.html`. Pens
 
 Le même `name="projets"` limite l’ouverture à un seul projet à la fois. Le navigateur gère ce fonctionnement, sans JavaScript. L’identifiant `id` permet un lien direct comme `projets.html#job-board`.
 
-Le petit script `app.js`, chargé seulement par `projets.html`, ouvre le projet indiqué après le `#`. Les animations du menu et des captures restent en CSS.
+Le petit script `app.js`, chargé seulement par `projets.html`, a deux rôles :
+
+- Ouvrir le projet indiqué après le `#` dans un lien direct.
+- Faire défiler la page jusqu’au début du projet quand tu ouvres un accordéon.
+
+La fonction `afficherProjet` gère ce défilement avec `scrollIntoView`. L’événement `toggle` signale qu’un accordéon vient de s’ouvrir ou de se fermer. Le script ne fait défiler la page que lors de l’ouverture. Il respecte aussi le réglage du navigateur qui réduit les animations.
+
+Les animations du menu et des captures restent en CSS.
 
 ## Formulaire
 
@@ -89,6 +96,10 @@ Le petit script `app.js`, chargé seulement par `projets.html`, ouvre le projet 
 Le destinataire est configuré dans le compte Formspree. Aucun mot de passe n’est présent dans le code. L’adresse d’envoi du formulaire est publique : ce n’est pas une clé secrète.
 
 ## Téléphone et animations
+
+Dans le menu de `index.html`, chaque lien contient trois parties, écrites sur des lignes séparées : `nom-menu` pour le titre, `symbole-menu` pour le « + » et `aide-menu` pour la description. Le lien `<a>` entoure toute la rubrique : toute sa zone est donc cliquable.
+
+Sur téléphone, le CSS affiche les descriptions et masque les « + ». La règle `a::after` ajoute « Découvrir → » sous chaque description.
 
 Le bloc `@media (max-width: 760px)` à la fin du CSS adapte la disposition aux petits écrans. Les colonnes s’empilent avec `flex-direction: column`.
 

@@ -12,7 +12,7 @@ Portfolio personnel présentant mon parcours, mes projets et mon objectif d’al
 - `parcours.html` : parcours, progression, technologies et sport.
 - `contact.html` : coordonnées, CV, calendrier d’alternance et formulaire de contact.
 - `style.css` : mise en page et effets, avec règles pour les écrans de 760 px ou moins.
-- `app.js` : ouvre l’accordéon correspondant à un lien comme `projets.html#portfolio`.
+- `app.js` : ouvre un projet depuis un lien comme `projets.html#portfolio` et fait défiler la page vers l’accordéon ouvert.
 - `images/` : portrait, captures et icônes ; licence des icônes dans `images/LICENSE-icones.txt`.
 - `documents/` : CV et calendrier d’alternance au format PDF.
 - `MODIFIER.md` : guide de personnalisation fourni avec les fichiers du site.
