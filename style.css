@@ -2,8 +2,9 @@
 Chaque section correspond à une partie du site.
 
 Couleurs à chercher avec Ctrl+F :
-#f5efe5 = fond clair      #32251d = texte foncé
-#876537 = doré         #695949 = texte secondaire
+#faf7f0 = fond clair      #172e33 = texte foncé
+#006b73 = bleu pétrole      #b64e31 = corail
+#526367 = texte secondaire
 
 Pour changer une couleur partout, utilise "Remplacer tout".
 */
@@ -15,8 +16,8 @@ Pour changer une couleur partout, utilise "Remplacer tout".
 
 body {
     margin: 0;
-    background-color: #f5efe5;
-    color: #32251d;
+    background-color: #faf7f0;
+    color: #172e33;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.6;
@@ -57,7 +58,7 @@ em,
 .logo span,
 .identite span,
 .project-art strong span {
-    color: #876537;
+    color: #b64e31;
     font-style: normal;
 }
 
@@ -70,7 +71,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-    outline: 2px solid #876537;
+    outline: 2px solid #006b73;
     outline-offset: 5px;
 }
 
@@ -78,7 +79,7 @@ textarea:focus-visible {
 .identite p,
 dd,
 .contact-note p {
-    color: #695949;
+    color: #526367;
 }
 
 .intro {
@@ -92,7 +93,7 @@ dd,
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #695949;
+    color: #526367;
 }
 
 /* Lien d'accès rapide pour la navigation au clavier. */
@@ -138,7 +139,7 @@ footer {
 
 .header nav a:hover,
 .header nav a[aria-current] {
-    color: #876537;
+    color: #006b73;
 }
 
 .lien-contact {
@@ -176,10 +177,10 @@ flex: 1 leur donne la même part de largeur.
     height: 350px;
     width: 85%;
     margin: 0 auto;
-    border: 2px solid #b39a76;
-    border-radius: 160px 160px 16px 16px;
-    box-shadow: 12px 12px 0 #eadecb;
-    background-color: #e6d8c2;
+    border: 2px solid #588b88;
+    border-radius: 24px; /* Même cadre rectangulaire sur PC et téléphone. */
+    box-shadow: 8px 8px 0 #d3e7e2;
+    background-color: #e5ede9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,13 +227,13 @@ flex: 1 leur donne la même part de largeur.
 /* 4. MENU DE L’ACCUEIL : SURVOL ET ROTATION DU + EN CSS */
 .navigation-accueil {
     padding: 40px 35px;
-    background-color: #dfceb7;
-    color: #32251d;
+    background-color: #bdd6d1;
+    color: #172e33;
     border-radius: 24px;
 }
 
 .navigation-accueil .eyebrow {
-    color: #65513b;
+    color: #3e565b;
 }
 
 .menu-accueil a {
@@ -241,7 +242,7 @@ flex: 1 leur donne la même part de largeur.
     align-items: center;
     gap: 16px;
     padding: 18px 0;
-    border-bottom: 1px solid #bca78b;
+    border-bottom: 1px solid #88b1aa;
     transition: color 0.2s, padding 0.2s;
 }
 
@@ -260,7 +261,7 @@ flex: 1 leur donne la même part de largeur.
 
 .menu-accueil a:hover,
 .menu-accueil a:focus-visible {
-    color: #725024;
+    color: #1c5961;
     padding-left: 10px;
 }
 
@@ -274,7 +275,7 @@ flex: 1 leur donne la même part de largeur.
     display: none;
     width: 100%;
     font-size: 14px;
-    color: #65513b;
+    color: #3e565b;
 }
 
 .menu-accueil a:hover .aide-menu,
@@ -283,14 +284,14 @@ flex: 1 leur donne la même part de largeur.
 }
 
 .recherche-alternance {
-    border-left: 2px solid #876537;
+    border-left: 2px solid #006b73;
     padding-left: 18px;
     margin-top: 35px;
 }
 
 .recherche-alternance span {
     font-size: 13px;
-    color: #725024;
+    color: #1c5961;
 }
 
 .recherche-alternance p {
@@ -305,7 +306,7 @@ flex: 1 leur donne la même part de largeur.
     gap: 22px;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #bca78b;
+    border-top: 1px solid #88b1aa;
 }
 
 .reseaux-menu a {
@@ -355,14 +356,14 @@ flex: 1 leur donne la même part de largeur.
 
 .feature-project {
     background-color: white;
-    border: 1px solid #d8c9b5;
+    border: 1px solid #cad8d4;
     border-radius: 16px;
     overflow: hidden;
 }
 
 .project-art {
-    background-color: #dbc6a9;
-    color: #32251d;
+    background-color: #a9cbc6;
+    color: #172e33;
     padding: 30px;
     min-height: 300px;
     display: flex;
@@ -384,9 +385,9 @@ flex: 1 leur donne la même part de largeur.
 .projet-accordeon {
     scroll-margin-top: 16px;
     margin: 0 40px 24px;
-    border: 3px solid #b39a76;
+    border: 3px solid #588b88;
     border-radius: 16px;
-    background-color: #f5efe5;
+    background-color: #faf7f0;
 }
 
 .projet-accordeon summary {
@@ -404,12 +405,12 @@ flex: 1 leur donne la même part de largeur.
 
 .projet-accordeon summary:hover,
 .projet-accordeon summary:focus-visible {
-    color: #725024;
-    background-color: #eee2ce;
+    color: #1c5961;
+    background-color: #d3e7e2;
 }
 
 .projet-accordeon summary:focus-visible {
-    outline: 2px solid #876537;
+    outline: 2px solid #006b73;
     outline-offset: 4px;
 }
 
@@ -426,16 +427,16 @@ flex: 1 leur donne la même part de largeur.
 .contenu-projet > .apercu-projet:hover,
 .contenu-projet > .apercu-projet:focus-visible {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px #32251d1a;
+    box-shadow: 0 6px 16px #172e331a;
 }
 
 /* Captures cliquables : cadrer le haut de l’interface plutôt que les zones vides. */
 .apercu-projet {
     max-width: 100%;
     padding: 10px;
-    border: 3px solid #b39a76;
+    border: 3px solid #588b88;
     border-radius: 16px;
-    background-color: #eadecb;
+    background-color: #d3e7e2;
     text-align: center;
 }
 
@@ -446,7 +447,7 @@ flex: 1 leur donne la même part de largeur.
     aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: top;
-    border: 1px solid #b39a76;
+    border: 1px solid #588b88;
     border-radius: 6px;
     background-color: white;
 }
@@ -471,8 +472,8 @@ flex: 1 leur donne la même part de largeur.
     padding: 5px 10px;
     margin-bottom: 15px;
     font-size: 13px;
-    background-color: #eee2ce;
-    color: #705027;
+    background-color: #d3e7e2;
+    color: #1c5961;
 }
 
 dt {
@@ -487,7 +488,7 @@ dd {
     display: flex;
     gap: 40px;
     padding: 30px 0;
-    border-top: 1px solid #d8c9b5;
+    border-top: 1px solid #cad8d4;
 }
 
 .timeline-label {
@@ -497,7 +498,7 @@ dd {
 
 .values {
     margin: 0 40px 50px;
-    background-color: #eadecb;
+    background-color: #d3e7e2;
 }
 
 /* Cartes de technologies : elles passent à la ligne selon la place disponible. */
@@ -512,7 +513,7 @@ dd {
     flex: 1 1 240px;
     min-width: 0;
     padding: 24px;
-    border: 1px solid #d8c9b5;
+    border: 1px solid #cad8d4;
     border-radius: 16px;
     background-color: white;
 }
@@ -528,7 +529,7 @@ dd {
     border: 0;
     border-radius: 30px;
     transition: transform 0.2s, background-color 0.2s;
-    background-color: #876537;
+    background-color: #006b73;
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -537,18 +538,18 @@ dd {
 
 .button:hover {
     transform: translateY(-3px);
-    background-color: #654723;
+    background-color: #174f57;
 }
 
 /* Le calendrier reprend la forme du bouton CV, avec un fond transparent. */
 .button-secondaire {
     background-color: transparent;
-    border: 1px solid #876537;
-    color: #705027;
+    border: 1px solid #006b73;
+    color: #1c5961;
 }
 
 .button-secondaire:hover {
-    background-color: #eadecb;
+    background-color: #d3e7e2;
 }
 
 .text-link {
@@ -578,7 +579,7 @@ form {
     border-radius: 16px;
     background-color: white;
     padding: 28px;
-    border: 1px solid #d8c9b5;
+    border: 1px solid #cad8d4;
 }
 
 label {
@@ -593,9 +594,9 @@ textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #d8c9b5;
+    border: 1px solid #cad8d4;
     border-radius: 4px;
-    color: #32251d;
+    color: #172e33;
     background-color: white;
     font: inherit;
 }
@@ -606,7 +607,7 @@ textarea {
 
 /* 8. PIED DE PAGE */
 footer {
-    border-top: 1px solid #d8c9b5;
+    border-top: 1px solid #cad8d4;
 }
 
 footer p {
@@ -739,7 +740,7 @@ footer p {
         width: 100%;
         font-size: 13px;
         font-weight: 600;
-        color: #725024;
+        color: #1c5961;
     }
 
     /* Éviter le décalage du texte sur téléphone et signaler l’appui. */
@@ -749,7 +750,7 @@ footer p {
     }
 
     .menu-accueil a:active {
-        background-color: #eadecb;
+        background-color: #d3e7e2;
     }
 
     .identite h1 {
