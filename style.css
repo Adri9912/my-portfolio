@@ -6,9 +6,9 @@ Les panneaux gardent leur fond clair et leur texte foncé.
 
 :root {
     color-scheme: light;
-    --fond: #faf7f0;
+    --fond: linear-gradient(135deg, #faf7f0 0%, #e4eeea 52%, #f5e2d5 100%);
     --texte: #172e33;
-    --accent: #b64e31;
+    --accent: #aa472c;
     --secondaire: #526367;
     --navigation-active: #006b73;
     --focus: #006b73;
@@ -151,19 +151,13 @@ footer {
     gap: 24px;
 }
 
-.header nav a,
-.lien-contact {
+.header nav a {
     font-size: 15px;
 }
 
 .header nav a:hover,
 .header nav a[aria-current] {
     color: var(--navigation-active);
-}
-
-.lien-contact {
-    text-decoration: underline;
-    text-underline-offset: 4px;
 }
 
 /* 3. ACCUEIL : PRÉSENTATION À GAUCHE, MENU À DROITE
@@ -635,10 +629,28 @@ footer p {
     margin: 0;
 }
 
-/* BOUTONS JOUR / NUIT ET PAUSE DES ÉTOILES */
-.header,
-.entete-accueil {
+/* BOUTON JOUR / NUIT */
+.header {
     flex-wrap: wrap;
+}
+
+/* Deux côtés égaux gardent PORTFOLIO au centre, quelle que soit la largeur du bouton. */
+.entete-accueil {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.entete-accueil > span {
+    text-align: center;
+}
+
+.entete-accueil .logo {
+    justify-self: start;
+}
+
+.entete-accueil .reglages-affichage {
+    justify-self: end;
+    width: auto;
 }
 
 .reglages-affichage {
@@ -647,8 +659,7 @@ footer p {
     gap: 8px;
 }
 
-.reglages-affichage[hidden],
-.bouton-etoiles[hidden] {
+.reglages-affichage[hidden] {
     display: none;
 }
 
@@ -720,7 +731,6 @@ html[data-theme="nuit"] .ciel-etoile {
     to { opacity: var(--intensite); }
 }
 
-html[data-etoiles="pause"] .etoile,
 html[data-page-masquee] .etoile {
     animation-play-state: paused;
 }
@@ -776,9 +786,31 @@ html[data-theme="nuit"] .contact-note .lien-coordonnee img {
         flex-wrap: wrap;
     }
 
-    .header-note,
-    .entete-accueil > span {
+    .header-note {
         display: none;
+    }
+
+    /* Sur téléphone, le titre a sa propre ligne pour garder les boutons lisibles. */
+    .entete-accueil {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .entete-accueil > span {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .entete-accueil .logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .entete-accueil .reglages-affichage {
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .reglages-affichage {

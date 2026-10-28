@@ -2,29 +2,18 @@
 const racine = document.documentElement;
 try {
     racine.dataset.theme = localStorage.getItem('portfolio-theme') === 'nuit' ? 'nuit' : 'jour';
-    racine.dataset.etoiles = localStorage.getItem('portfolio-etoiles') === 'pause' ? 'pause' : 'animees';
 } catch {
     // Le site fonctionne aussi si le navigateur refuse le stockage local.
     racine.dataset.theme = 'jour';
-    racine.dataset.etoiles = 'animees';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     const boutonTheme = document.querySelector('.bouton-theme');
-    const boutonEtoiles = document.querySelector('.bouton-etoiles');
-    const mouvementReduit = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    function actualiserBoutons() {
+    function actualiserBouton() {
         const nuit = racine.dataset.theme === 'nuit';
-        const pause = racine.dataset.etoiles === 'pause';
         boutonTheme.textContent = nuit ? '☀ Mode jour' : '☾ Mode nuit';
         boutonTheme.setAttribute('aria-label', nuit ? 'Passer en mode jour' : 'Passer en mode nuit');
-        const masquerPause = !nuit || mouvementReduit.matches;
-        if (masquerPause && document.activeElement === boutonEtoiles) {
-            boutonTheme.focus();
-        }
-        boutonEtoiles.hidden = masquerPause;
-        boutonEtoiles.textContent = pause ? 'Animer les étoiles' : 'Pause étoiles';
     }
 
     // La mémorisation est facultative : le bouton fonctionne même sans elle.
@@ -39,18 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     boutonTheme.addEventListener('click', function() {
         racine.dataset.theme = racine.dataset.theme === 'nuit' ? 'jour' : 'nuit';
         memoriser('portfolio-theme', racine.dataset.theme);
-        actualiserBoutons();
-        // Le bouton Pause va disparaître en mode jour : garder le focus sur le thème.
-        boutonTheme.focus();
+        actualiserBouton();
     });
 
-    boutonEtoiles.addEventListener('click', function() {
-        racine.dataset.etoiles = racine.dataset.etoiles === 'pause' ? 'animees' : 'pause';
-        memoriser('portfolio-etoiles', racine.dataset.etoiles);
-        actualiserBoutons();
-    });
-
-    mouvementReduit.addEventListener('change', actualiserBoutons);
     document.addEventListener('visibilitychange', function() {
         racine.toggleAttribute('data-page-masquee', document.hidden);
     });
@@ -73,5 +53,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.body.prepend(ciel);
     document.querySelector('.reglages-affichage').hidden = false;
-    actualiserBoutons();
+    actualiserBouton();
 });
