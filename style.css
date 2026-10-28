@@ -696,6 +696,14 @@ footer p {
     cursor: pointer;
 }
 
+/* Sur l’accueil uniquement, conserver le bouton avec son texte. */
+.entete-accueil .bouton-theme {
+    width: auto;
+    padding: 8px 14px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
 .reglages-affichage button:hover {
     border-color: var(--navigation-active);
 }

@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function actualiserBouton() {
         const nuit = racine.dataset.theme === 'nuit';
         boutonTheme.textContent = nuit ? '☀' : '☾';
+        if (document.body.classList.contains('page-accueil')) {
+            boutonTheme.textContent += nuit ? ' Mode jour' : ' Mode nuit';
+        }
         const libelle = nuit ? 'Passer en mode jour' : 'Passer en mode nuit';
         boutonTheme.setAttribute('aria-label', libelle);
         boutonTheme.setAttribute('title', libelle);
