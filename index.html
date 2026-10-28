@@ -6,7 +6,8 @@
         <title>Adrien Calvayrac — Portfolio</title>
         <meta name="description" content="Découvrez le parcours, les projets et le CV d’Adrien Calvayrac, étudiant à Epitech, à la recherche d’une alternance en développement et gestion informatique en 2027.">
         <link rel="icon" type="image/svg+xml" href="favicon.svg?v=petrole-1">
-        <link rel="stylesheet" href="style.css?v=espace-1">
+        <script src="theme.js?v=jour-nuit-1"></script>
+        <link rel="stylesheet" href="style.css?v=jour-nuit-1">
         <script src="vendor/gsap.min.js" defer></script>
         <script src="animations.js" defer></script>
     </head>
@@ -17,6 +18,10 @@
             <a class="logo" href="index.html" aria-label="Adrien, accueil">adrien<span>.</span></a>
             <span>PORTFOLIO</span>
             <a href="contact.html" class="lien-contact">Parlons de la suite</a>
+            <div class="reglages-affichage" hidden>
+                <button class="bouton-theme" type="button" aria-label="Passer en mode nuit">☾ Mode nuit</button>
+                <button class="bouton-etoiles" type="button" hidden>Pause étoiles</button>
+            </div>
         </header>
         <!-- CONTENU PRINCIPAL -->
         <main id="contenu">
