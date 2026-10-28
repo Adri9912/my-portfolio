@@ -1,0 +1,4 @@
+GSAP 3.15.0 — Copyright 2026, GreenSock. All rights reserved.
+Source officielle : https://www.npmjs.com/package/gsap/v/3.15.0
+Licence standard : https://gsap.com/standard-license
+L’en-tête de licence du fichier distribué est conservé dans gsap.min.js.
