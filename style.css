@@ -147,6 +147,7 @@ footer {
 
 .header nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
 }
@@ -630,11 +631,8 @@ footer p {
 }
 
 /* BOUTON JOUR / NUIT */
-.header {
-    flex-wrap: wrap;
-}
-
-/* Deux côtés égaux gardent PORTFOLIO au centre, quelle que soit la largeur du bouton. */
+/* Deux côtés égaux gardent la navigation ou PORTFOLIO exactement au centre. */
+.header,
 .entete-accueil {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -644,8 +642,27 @@ footer p {
     text-align: center;
 }
 
+.header .logo,
 .entete-accueil .logo {
     justify-self: start;
+}
+
+.entete-outils {
+    display: flex;
+    justify-self: end;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.entete-outils .header-note {
+    text-align: right;
+    line-height: 1.4;
+}
+
+.entete-outils .reglages-affichage {
+    flex-shrink: 0;
 }
 
 .entete-accueil .reglages-affichage {
@@ -664,14 +681,18 @@ footer p {
 }
 
 .reglages-affichage button {
-    min-height: 44px;
-    padding: 8px 14px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     border: 1px solid var(--bordure-section);
     border-radius: 24px;
     background: transparent;
     color: inherit;
     font: inherit;
-    font-size: 13px;
+    font-size: 24px;
+    line-height: 1;
     cursor: pointer;
 }
 
@@ -813,11 +834,24 @@ html[data-theme="nuit"] .contact-note .lien-coordonnee img {
         grid-row: 1;
     }
 
-    .reglages-affichage {
-        width: 100%;
+    .header {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .header .logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .header .entete-outils {
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .header nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
         gap: 18px;
     }

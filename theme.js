@@ -12,8 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function actualiserBouton() {
         const nuit = racine.dataset.theme === 'nuit';
-        boutonTheme.textContent = nuit ? '☀ Mode jour' : '☾ Mode nuit';
-        boutonTheme.setAttribute('aria-label', nuit ? 'Passer en mode jour' : 'Passer en mode nuit');
+        boutonTheme.textContent = nuit ? '☀' : '☾';
+        const libelle = nuit ? 'Passer en mode jour' : 'Passer en mode nuit';
+        boutonTheme.setAttribute('aria-label', libelle);
+        boutonTheme.setAttribute('title', libelle);
     }
 
     // La mémorisation est facultative : le bouton fonctionne même sans elle.
