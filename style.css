@@ -691,9 +691,14 @@ footer p {
     background: transparent;
     color: inherit;
     font: inherit;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1;
     cursor: pointer;
+}
+
+.header .bouton-theme {
+    width: 32px;
+    height: 32px;
 }
 
 /* Sur l’accueil uniquement, conserver le bouton avec son texte. */
