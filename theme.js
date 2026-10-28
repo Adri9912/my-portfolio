@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         etoile.style.setProperty('--x', Math.random() * 100 + '%');
         etoile.style.setProperty('--y', Math.random() * 100 + '%');
         etoile.style.setProperty('--taille', 0.6 + Math.random() ** 2 * 1.7 + 'px');
-        etoile.style.setProperty('--intensite', 0.25 + Math.random() * 0.5);
-        etoile.style.setProperty('--duree', 4 + Math.random() * 6 + 's');
+        etoile.style.setProperty('--intensite', 0.5 + Math.random() * 0.45);
+        etoile.style.setProperty('--duree', 2.5 + Math.random() * 2.5 + 's');
         etoile.style.setProperty('--retard', -Math.random() * 10 + 's');
         ciel.appendChild(etoile);
     }

@@ -714,11 +714,11 @@ html[data-theme="nuit"] .ciel-etoile {
     border-radius: 50%;
     background: #faf7f0;
     opacity: var(--intensite);
+    animation: scintiller var(--duree) ease-in-out var(--retard) infinite alternate;
 }
 
 .etoile:nth-child(3n) {
     background: #c4e3e0;
-    animation: scintiller var(--duree) ease-in-out var(--retard) infinite alternate;
 }
 
 .etoile:nth-child(17n) {
@@ -727,7 +727,7 @@ html[data-theme="nuit"] .ciel-etoile {
 }
 
 @keyframes scintiller {
-    from { opacity: calc(var(--intensite) * 0.35); }
+    from { opacity: calc(var(--intensite) * 0.15); }
     to { opacity: var(--intensite); }
 }
 
@@ -936,7 +936,7 @@ html[data-theme="nuit"] .contact-note .lien-coordonnee img {
 
 /* Respecter les personnes qui préfèrent éviter les animations. */
 @media (prefers-reduced-motion: reduce) {
-    .etoile:nth-child(3n) {
+    .etoile {
         animation: none;
     }
 
