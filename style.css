@@ -466,6 +466,11 @@ flex: 1 leur donne la même part de largeur.
     background-color: white;
 }
 
+/* Conserver la capture entière de Ligue 1 Live dans son cadre. */
+#ligue1-live .apercu-projet img {
+    aspect-ratio: auto;
+}
+
 /* Le Job Board est surtout utile dans la partie haute de sa capture. */
 #job-board .apercu-projet img {
     aspect-ratio: 16 / 10;

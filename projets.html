@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Projets — Adrien Calvayrac</title>
-        <meta name="description" content="Découvrez mes projets : Job Board avec Laravel et MySQL, CV en ligne et portfolio. Contexte, contribution, technologies et liens GitHub.">
+        <meta name="description" content="Découvrez mes projets : Ligue 1 Live avec Vue et Laravel, Job Board, CV en ligne et portfolio. Objectifs, technologies, sites et dépôts GitHub.">
         <link rel="icon" type="image/svg+xml" href="favicon.svg?v=petrole-1">
         <script src="theme.js?v=navigation-centree-2"></script>
-        <link rel="stylesheet" href="style.css?v=navigation-centree-2">
+        <link rel="stylesheet" href="style.css?v=projets-ligue1-1">
         <script src="app.js?v=projets-scroll-1" defer></script>
     </head>
     <body>
@@ -36,6 +36,39 @@
                 <h1>Mes <em>projets.</em></h1>
                 <p class="intro">Les premiers essais, les idées qui prennent forme et les apprentissages qui vont avec.</p>
             </section>
+            <details class="projet-accordeon" name="projets" id="ligue1-live">
+                <summary><h2>Ligue 1 Live</h2></summary>
+                <div class="project-detail contenu-projet">
+                    <a class="apercu-projet" href="https://ligue1-live.alwaysdata.net/" target="_blank" rel="noopener noreferrer" aria-label="Découvrir Ligue 1 Live dans un nouvel onglet">
+                        <img src="images/ligue1-live.jpg" alt="Accueil de Ligue 1 Live en mode sombre : match à l’affiche, calendrier des rencontres et accès au classement et aux clubs." width="1265" height="712" loading="lazy">
+                    </a>
+                    <div>
+                        <span class="tag">PROJET PERSONNEL</span>
+                        <p>Une application web pour suivre le championnat de France de Ligue 1.</p>
+                        <dl>
+                            <dt>Le contexte</dt>
+                            <dd>Un projet personnel qui prolonge mes premiers sites web avec une application interactive connectée à des données sportives.</dd>
+                            <dt>L’objectif</dt>
+                            <dd>Rassembler les matchs, les résultats, le calendrier et le classement dans une interface utilisable sur ordinateur et sur smartphone.</dd>
+                            <dt>Les fonctionnalités</dt>
+                            <dd>Consulter les rencontres par journée, suivre un club favori, parcourir les fiches clubs et joueurs et retrouver les saisons précédentes. Deux thèmes permettent de choisir un affichage clair ou sombre.</dd>
+                            <dt>L’organisation technique</dt>
+                            <dd>Une interface Vue 3, mise en forme avec Tailwind CSS et compilée avec Vite. Le serveur Laravel interroge les API Highlightly et API-Football, protège leurs clés et gère le cache et les quotas de requêtes.</dd>
+                            <dt>Le projet aujourd’hui</dt>
+                            <dd>Le site est publié sur alwaysdata. Les données disponibles et leur fréquence d’actualisation dépendent des fournisseurs. Les mises à jour du code sont testées puis déployées automatiquement.</dd>
+                        </dl>
+                        <div class="chips">
+                            <span>Vue 3</span>
+                            <span>JavaScript</span>
+                            <span>Tailwind CSS</span>
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                        </div>
+                        <p><a class="text-link" href="https://ligue1-live.alwaysdata.net/" target="_blank" rel="noopener noreferrer">Découvrir le site</a></p>
+                        <p class="lien-github"><a class="text-link" href="https://github.com/Adri9912/Ligue1-live" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a></p>
+                    </div>
+                </div>
+            </details>
             <details class="projet-accordeon" name="projets" id="job-board">
                 <summary><h2>Job Board</h2></summary>
                 <div class="project-detail contenu-projet">
